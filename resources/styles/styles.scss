@@ -1,0 +1,203 @@
+// Write your overrides
+
+// Animation utilities
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+// Timing input styling for campaign workflows
+.wait-field {
+  inline-size: 42px !important;
+
+  .v-field__input {
+    font-size: 13px !important;
+    min-block-size: 28px !important;
+    padding-block: 0 !important;
+    padding-inline: 4px !important;
+    text-align: center !important;
+  }
+}
+
+// Media queries for global spacing and responsive behavior
+@media (max-width: 600px) {
+  .v-card {
+    border-radius: 6px !important;
+  }
+
+  // Adjust common paddings for small screens (320px)
+  .pa-6 {
+    padding-block: 16px !important;
+    padding-inline: 16px !important;
+  }
+
+  .gap-4 {
+    gap: 12px !important;
+  }
+}
+
+// Smooth horizontal scrolling for tables
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    block-size: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(var(--v-theme-on-surface), 0.1);
+  }
+}
+
+// Custom dashed border box for timing
+.dashed-box {
+  border: 1px dashed rgba(var(--v-theme-on-surface), 0.12);
+  border-radius: 8px;
+}
+
+// Responsive flex stacking
+.flex-stack-sm {
+  display: flex !important;
+  flex-direction: column !important;
+
+  @media (min-width: 600px) {
+    flex-direction: row !important;
+  }
+}
+
+.w-full-xs {
+  inline-size: 100% !important;
+
+  @media (min-width: 600px) {
+    inline-size: auto !important;
+  }
+}
+
+// Mapping Table styles
+.mapping-container {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.08);
+  border-radius: 8px;
+}
+
+.mapping-table-header {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: flex;
+    align-items: center;
+    background-color: rgb(var(--v-theme-surface));
+    border-block-end: 1px solid rgba(var(--v-theme-on-surface), 0.08);
+    padding-block: 16px;
+    padding-inline: 24px;
+  }
+}
+
+.mapping-table-row {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-block: 0;
+    padding-inline: 0;
+  }
+}
+
+.mapping-card {
+  flex-grow: 1;
+  padding: 8px !important;
+
+  @media (min-width: 600px) {
+    padding: 16px !important;
+  }
+}
+
+// Responsive Border Helpers
+.border-b-xs {
+  @media (max-width: 599px) {
+    border-block-end: 1px solid rgba(var(--v-theme-primary), 0.3) !important;
+  }
+}
+
+.border-e-sm {
+  @media (min-width: 600px) {
+    border-inline-end: 1px solid rgba(var(--v-theme-primary), 0.3) !important;
+  }
+}
+
+// Timeline and Workflow Builder styles
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.timeline-connector {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+
+  .node {
+    border: 2px solid rgba(var(--v-theme-on-surface), 0.25);
+    border-radius: 50%;
+    background-color: rgb(var(--v-theme-surface));
+    block-size: 14px;
+    inline-size: 14px;
+    margin-block-start: 18px;
+  }
+
+  .line {
+    flex-grow: 1;
+    border-inline-start: 2px dashed rgba(var(--v-theme-on-surface), 0.15);
+    margin-block: 4px;
+  }
+}
+
+.wait-duration-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  @media (max-width: 400px) {
+    gap: 6px;
+  }
+}
+
+.tab-campaign {
+  @media (max-width: 600px) {
+    inline-size: 100% !important;
+  }
+}
