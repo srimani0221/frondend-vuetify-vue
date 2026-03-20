@@ -95,7 +95,7 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 5000,
-    outDir: 'dist',
+    outDir: 'public/build',
   },
   optimizeDeps: {
     exclude: ['vuetify'],
